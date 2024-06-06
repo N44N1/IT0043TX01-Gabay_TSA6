@@ -1,0 +1,197 @@
+*{
+    border: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    width: 90vw;
+    border: 5px;
+    margin: 20px auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+img{
+    width: 200px;
+}
+
+.box{
+    border: 5px solid rgb(60, 60, 194);
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    box-shadow: 5px  5px 10px black;
+}
+
+.name{
+    font-size: 5vb;
+    padding: 6px;
+    text-shadow: 5px  5px 10px black;
+}
+
+.title{
+    font-size: 1.5rem;
+    font-weight: bolder;
+    padding: 6px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 10px  10px 20px black;
+}
+
+.desc{
+    padding: 15px;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.detail{
+    text-align: center;
+}
+
+.name-title{
+    text-align: center;
+}
+
+#protag .detail, #stupei .detail{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+#protag{
+    grid-column: 1/3;
+    background-color: #1f1b49;
+}
+
+#mitsuru{
+    background-color: crimson;
+    grid-column: 3/4;
+}
+
+#koro{
+    background-color: gray;
+    grid-column: 4/5;
+    grid-row: 1/3;
+}
+
+#aigis{
+    background-color: darkgoldenrod;
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+#stupei{
+    background-color: rgb(86, 131, 216);
+    grid-column: 2/4;
+}
+
+.femc{
+    width: 100px;
+    text-align: center;
+}
+
+@media (max-width:1240px){
+    .container{
+        grid-template-columns: repeat(2, 1fr);
+        width: 60vw;
+    }
+    .femc{
+        width: auto;
+        text-align: center;
+    }
+    #protag{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    #mitsuru{
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    #aigis{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    #stupei{
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    #koro{
+        grid-column: 1/3;
+        grid-row: 3/4;
+    }
+    #protag .detail, #stupei .detail{
+        display: block;
+        align-items: center;
+        gap: 50px;
+    }
+    #koro .detail{
+        display: flex;
+        align-items: center;
+        gap: 100px;
+    }
+}
+
+@media (max-width:860px){
+    .container{
+        grid-template-columns: 1fr;
+        width: 70vw;
+    }
+    #protag .detail, #stupei .detail, #koro .detail, #mitsuru .detail, #aigis .detail{
+        display: flex;
+        align-items: center;
+        gap: 50px;
+    }
+    .femc{
+        width: 200px;
+        text-align: center;
+    }
+    #protag{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    #mitsuru{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    #aigis{
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+    #stupei{
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+    #koro{
+        grid-column: 1/2;
+        grid-row: 5/6;
+    }
+    .fool:hover{
+        background-image: url("fool.png");
+        background-size: contain;
+        text-shadow: 5px 5px 10px black;
+    }
+    .empress:hover{
+        background-image: url("empress.png");
+        background-size: contain;
+        text-shadow: 5px 5px 10px black;
+    }
+    .aeon:hover{
+        background-image: url("aeon.jpg");
+        background-size: contain;
+        text-shadow: 5px 5px 10px black;
+    }
+    .strength:hover{
+        background-image: url("strength.jpg");
+        background-size: contain;
+        text-shadow: 5px 5px 10px black;
+    }
+    .magician:hover{
+        background-image: url("magician.jpg");
+        background-size: contain;
+        text-shadow: 5px 5px 10px black;
+    }
+}
